@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Beautiful Girl ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+    180deg,
+    #fff0f5,
+    #ffe4ec,
+    #ffd6e7,
+    #ffc2d4,
+    #ffb3c7
+    );
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:6rem;
+    color: blue;
+    font-family:'Dancing Script',cursive;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:650px;
+    color:#555;
+    font-size:1.2rem;
+}
+
+.hero button{
+    margin-top:35px;
+    padding:16px 40px;
+    border:none;
+    border-radius:50px;
+    background:#ff4f81;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+    transition:.4s;
+}
+
+.hero button:hover{
+    transform:scale(1.08);
+    box-shadow:0 10px 30px rgba(255,79,129,.4);
+}
+
+/* FLOATING GALLERY */
+
+.floating-gallery{
+    position:relative;
+    width:100%;
+    min-height:5800px;
+}
+
+/* CARD */
+
+.floating-card{
+
+    position:absolute;
+
+    width:260px;
+
+    background:white;
+
+    padding:12px 12px 25px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 50px rgba(255,105,180,.25);
+
+    opacity:0;
+
+    transform:translateY(100px);
+
+    transition:.8s;
+
+    animation:floating 6s ease-in-out infinite;
+}
+
+.floating-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.floating-card:hover{
+    scale:1.08;
+}
+
+.floating-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+.floating-card h3{
+    color:#ff2d75;
+    margin-top:12px;
+    text-align:center;
+}
+
+.floating-card p{
+    text-align:center;
+    color:#666;
+    margin-top:8px;
+    line-height:1.6;
+}
+
+.floating-card::before{
+    content:"💕";
+    position:absolute;
+    top:-12px;
+    right:-8px;
+    font-size:26px;
+}
+
+/* POSITIONS */
+
+.card1  { top:100px; left:5%; rotate:-7deg; }
+.card2  { top:350px; right:8%; rotate:5deg; }
+.card3  { top:650px; left:35%; rotate:-4deg; }
+
+.card4  { top:950px; left:10%; rotate:8deg; }
+.card5  { top:1250px; right:10%; rotate:-6deg; }
+.card6  { top:1550px; left:40%; rotate:4deg; }
+
+.card7  { top:1850px; left:8%; rotate:-8deg; }
+.card8  { top:2150px; right:12%; rotate:7deg; }
+.card9  { top:2450px; left:32%; rotate:-3deg; }
+
+.card10 { top:2750px; left:5%; rotate:6deg; }
+.card11 { top:3050px; right:8%; rotate:-5deg; }
+.card12 { top:3350px; left:38%; rotate:4deg; }
+
+.card13 { top:3650px; left:12%; rotate:-7deg; }
+.card14 { top:3950px; right:10%; rotate:8deg; }
+.card15 { top:4250px; left:30%; rotate:-4deg; }
+
+.card16 { top:4550px; left:8%; rotate:6deg; }
+.card17 { top:4850px; right:8%; rotate:-5deg; }
+.card18 { top:5150px; left:35%; rotate:7deg; }
+
+/* FLOATING ANIMATION */
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* LOVE LETTER */
+
+.love-letter{
+
+    width:85%;
+    max-width:900px;
+
+    margin:120px auto;
+
+    background:rgba(255,255,255,.5);
+
+    backdrop-filter:blur(15px);
+
+    padding:60px;
+
+    border-radius:35px;
+
+    text-align:center;
+
+    box-shadow:
+    0 20px 50px rgba(255,105,180,.15);
+}
+
+.love-letter h2{
+    font-size:3rem;
+    color:#ff2d75;
+    font-family:'Dancing Script',cursive;
+}
+
+.love-letter p{
+    margin-top:20px;
+    color:#555;
+    line-height:2;
+}
+
+/* ENDING */
+
+.ending{
+
+    height:90vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ff89b0,
+    #ff5f96
+    );
+}
+
+.ending h1{
+    color:white;
+    font-size:5rem;
+    font-family:'Dancing Script',cursive;
+}
+
+.ending p{
+    color:white;
+    margin-top:20px;
+    font-size:1.2rem;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:4rem;
+}
+
+.floating-gallery{
+    min-height:auto;
+    padding:20px;
+}
+
+.floating-card{
+    position:relative;
+    width:100%;
+    margin-bottom:30px;
+    left:auto!important;
+    right:auto!important;
+    top:auto!important;
+    rotate:0deg!important;
+}
+
+.love-letter{
+    padding:30px;
+}
+
+.ending h1{
+    font-size:3rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1>For You, my blue 💙</h1>
+
+<p>
+Every picture tells a story,
+but your beauty tells a thousand.
+</p>
+
+<button onclick="goGallery()">
+View Our Memories 💕
+</button>
+
+</section>
+
+<section class="floating-gallery" id="gallery">
+
+<div class="floating-card card1 reveal">
+<img src="./messybun.jpeg">
+<h3>the GOAT</h3>
+<p>this one is GOAT,,, akhon porjonto unbeatable tmr ei pic.</p>
+</div>
+
+<div class="floating-card card2 reveal">
+<img src="./goat.jpeg">
+<h3>Runner up</h3>
+<p>tmr ei pic final e giye GOAT er kache here gese😂</p>
+</div>
+
+<div class="floating-card card3 reveal">
+<img src="./black dress.jpeg">
+<h3>Your Smile</h3>
+<p>tmr formalin mukto hashi + black dress er combo amar fav.
+</p>
+</div>
+
+<div class="floating-card card4 reveal">
+<img src="./sunkiss.jpeg">
+<h3>Wallpaper</h3>
+<p>tmr ei pic amar keyboard er wallpaper👀</p>
+</div>
+
+<div class="floating-card card5 reveal">
+<img src="./missme.jpeg">
+<h3>Missing me😂</h3>
+<p>eta relation er ager,,, tnr mukh theke ber koraisi j tumi amake miss korba. eta joss chilo😂</p>
+</div>
+
+<div class="floating-card card6 reveal">
+<img src="./callss.jpeg">
+<h3>Call SS</h3>
+<p>tumi permission dewar por ei SS ta nisilam. jodio amare dekha jayna😫</p>
+</div>
+
+<div class="floating-card card7 reveal">
+<img src="./song.jpeg">
+<h3>Song</h3>
+<p>eksathe bulleya gan disilam amra</p>
+</div>
+
+<div class="floating-card card8 reveal">
+<img src="./damra.jpeg">
+<h3>Damra goru</h3>
+<p> uni damra goru chine na🤣</p>
+</div>
+
+<div class="floating-card card9 reveal">
+<img src="./distance.jpeg">
+<h3>Distance</h3>
+<p>tmr amar distance.</p>
+</div>
+
+<div class="floating-card card10 reveal">
+<img src="./funny.jpeg">
+<h3>pretty one</h3>
+<p>areeeh ei pic ta bhule chole asche ekhane.🫢</p>
+</div>
+
+<div class="floating-card card11 reveal">
+<img src="./china.jpeg">
+<h3>chinese</h3>
+<p>ching chong ding dong.😛</p>
+</div>
+
+<div class="floating-card card12 reveal">
+<img src="./movie.jpeg">
+<h3>First Movie</h3>
+<p>eta amader first movie. eksathe dekhsi,,, jetay amar sathe ekta ogothon ghote🙂</p>
+</div>
+
+<div class="floating-card card13 reveal">
+<img src="./chih.jpeg">
+<h3>wakk thuh(amar chehara)</h3>
+<p>eta dite chai ni... tumi kalk tulso dekhe dilam.😒</p>
+</div>
+
+<div class="floating-card card14 reveal">
+<img src="./may13.jpeg">
+<h3>May 13</h3>
+<p>May 13,,,, amio bio te mention korsi tmre,,, a soft launch</p>
+</div>
+
+<div class="floating-card card15 reveal">
+<img src="./gach.jpeg">
+<h3>Gach</h3>
+<p>shupari gach e tmr amar nam likhsi🤣</p>
+</div>
+
+<div class="floating-card card16 reveal">
+<img src="./loveu.jpeg">
+<h3>Love You</h3>
+<p>Beach e friends der kach theke lukiye tmr jonne likhsi... kotto efforts dekhso???😏</p>
+</div>
+
+<div class="floating-card card17 reveal">
+<img src="./monster.jpeg">
+<h3>Beauty and Monster</h3>
+<p>tumi beauty and ami monster🥱</p>
+</div>
+
+<div class="floating-card card18 reveal">
+<img src="./me.jpeg">
+<h3>Waak thuh again</h3>
+<p>just tmr jonne ami ei picture ta disi...eta naki GOAT pic. tmr chokher doctor dekhano dorkar😒</p>
+</div>
+
+</section>
+
+<section class="love-letter">
+
+<h2>💌 A Little Love Letter</h2>
+
+<p>
+Thank you for bringing happiness into my life.
+Every smile, every laugh, every memory with you
+becomes something I treasure forever.
+
+You are my favorite person,
+my favorite memory,
+and my favorite future.
+</p>
+
+</section>
+
+<section class="ending">
+
+<h1>
+You Are My Today ❤️<br>
+And My Tomorrow
+</h1>
+
+<p> I love you Forever & Always 💕</p>
+
+</section>
+
+<script>
+
+function goGallery(){
+    document.getElementById('gallery')
+    .scrollIntoView({
+        behavior:'smooth'
+    });
+}
+
+const cards=document.querySelectorAll('.reveal');
+
+function revealCards(){
+
+cards.forEach(card=>{
+
+const top=card.getBoundingClientRect().top;
+
+if(top < window.innerHeight-100){
+card.classList.add('show');
+}
+
+});
+
+}
+
+window.addEventListener('scroll',revealCards);
+
+revealCards();
+
+/* FLOATING HEARTS */
+
+for(let i=0;i<60;i++){
+
+const heart=document.createElement('div');
+
+heart.innerHTML='❤️';
+
+heart.style.position='fixed';
+heart.style.left=Math.random()*100+'vw';
+heart.style.top=Math.random()*100+'vh';
+
+heart.style.fontSize=
+(15+Math.random()*20)+'px';
+
+heart.style.opacity='.15';
+
+heart.style.pointerEvents='none';
+
+heart.style.zIndex='999';
+
+heart.animate(
+[
+{transform:'translateY(0px)'},
+{transform:'translateY(-60px)'}
+],
+{
+duration:3000+Math.random()*4000,
+iterations:Infinity,
+direction:'alternate'
+}
+);
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
