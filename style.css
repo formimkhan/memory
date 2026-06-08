@@ -137,14 +137,13 @@ opacity:1;
 }
 .floating-gallery{
     position:relative;
-    min-height:3500px;
     width:100%;
     padding:100px 0;
 }
 
 .floating-card{
     position:absolute;
-    width:320px;
+    width:260px;
 
     background:rgba(255,255,255,.5);
     backdrop-filter:blur(12px);
